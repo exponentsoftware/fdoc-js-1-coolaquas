@@ -1,20 +1,20 @@
 //1.a
-// const countWords = (para, w1, w2) => {
-//   let arr = para.split(" ");
-//   let data = {
-//     [w1]: 0,
-//     [w2]: 0,
-//   };
-//   for (let index = 0; index < arr.length; index++) {
-//     if (arr[index].includes(w1)) data[w1] += 1;
-//     if (arr[index].includes(w2)) data[w2] += 1;
-//   }
-//   return data[w1] === data[w2]
-//     ? `The word ${w1} and ${w2}  occurred same time`
-//     : `The word ${
-//         data[w1] > data[w2] ? w1 : w2
-//       } more frequently occurred than ${data[w1] < data[w2] ? w1 : w2}.`;
-// };
+const countWords = (para, w1, w2) => {
+  let arr = para.split(" ");
+  let data = {
+    [w1]: 0,
+    [w2]: 0,
+  };
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index].includes(w1)) data[w1] += 1;
+    if (arr[index].includes(w2)) data[w2] += 1;
+  }
+  return data[w1] === data[w2]
+    ? `The word ${w1} and ${w2}  occurred same time`
+    : `The word ${
+        data[w1] > data[w2] ? w1 : w2
+      } more frequently occurred than ${data[w1] < data[w2] ? w1 : w2}.`;
+};
 
 // 1.b
 const cleanText = (str) => str.replace(/[%@$;!#&]/g, "");
